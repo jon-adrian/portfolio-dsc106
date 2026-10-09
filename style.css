@@ -74,7 +74,12 @@ form button {
   gap: 1em;
 }
 
-
 .projects img {
   width: 100%;
+}
+
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
 }
