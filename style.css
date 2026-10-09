@@ -56,3 +56,13 @@ input, textarea, button {
 label {
   margin-block: 1em;
 }
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+
+form button {
+  grid-column: 1 / -1;
+}

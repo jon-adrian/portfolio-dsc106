@@ -5,27 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <title>Contact</title>
-    <h1>Contact me!</h1>
 </head>
 <body>
-    <form action="mailto:jladrian@ucsd.edu" method="POST" enctype="text/plain">
+    <h1>Contact me!</h1>
+
     
-    <label>
-        Email
-        <input type="email" name="email">
-    </label>
+<form action="mailto:jladrian@ucsd.edu" method="POST" enctype="text/plain">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email">
 
-    <label>
-        Subject
-        <input name="subject">
-    </label>
+    <label for="subject">Subject</label>
+    <input name="subject" id="subject">
 
-    <label>
-        Message
-        <textarea name="body"></textarea>
-    </label>
+    <label for="message">Message</label>
+    <textarea name="body" id="message"></textarea>
 
     <button>Send</button>
-    </form>
+</form>
+
 </body>
 </html>
