@@ -89,15 +89,15 @@ document.body.insertAdjacentHTML(
     event.preventDefault();
   
     let data = new FormData(form);
+    let params = [];
   
-    let subject = data.get('subject');
-    let body = data.get('body');
+    for (let [name, value] of data) {
+      params.push(`${name}=${encodeURIComponent(value)}`);
+    }
   
-    let url = new URL(form.action);
+    let url = form.action + '?' + params.join('&');
   
-    url.searchParams.set('subject', subject);
-    url.searchParams.set('body', body);
-  
-    location.href = url.href;
+    location.href = url;
   });
+  
   
