@@ -47,3 +47,57 @@ let pages = [
   }
   
   
+document.body.insertAdjacentHTML(
+    'afterbegin',
+    `
+      <label class="color-scheme">
+        Theme:
+        <select>
+          <option value="light dark">Automatic</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+    `
+  );
+
+
+
+  let select = document.querySelector('.color-scheme select');
+
+  // Retrieve the previously saved theme
+  let savedTheme = localStorage.getItem('colorScheme') || 'light dark';
+  
+  // Apply the saved theme
+  document.documentElement.style.colorScheme = savedTheme;
+  
+  // Make the dropdown display the saved selection
+  select.value = savedTheme;
+  
+  // Update and save the theme whenever it changes
+  select.addEventListener('input', function (event) {
+    let theme = event.target.value;
+  
+    document.documentElement.style.colorScheme = theme;
+    localStorage.setItem('colorScheme', theme);
+  });
+
+
+  let form = document.querySelector('form');
+
+  form?.addEventListener('submit', function(event) {
+    event.preventDefault();
+  
+    let data = new FormData(form);
+  
+    let subject = data.get('subject');
+    let body = data.get('body');
+  
+    let url = new URL(form.action);
+  
+    url.searchParams.set('subject', subject);
+    url.searchParams.set('body', body);
+  
+    location.href = url.href;
+  });
+  
