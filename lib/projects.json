@@ -1,0 +1,63 @@
+[
+    {
+        "title": "Pokemon Battle Analyzer",
+        "image": "images/pokemonproj.png",
+        "description": "\n                A Discord bot that analyzes Pokemon Showdown battles,\n                providing tournament statistics and battle insights.\n            "
+    },
+    {
+        "title": "Pokemon Showdown Battle Analyzer Website",
+        "image": "images/PokemonWebsite.png",
+        "description": "A web app that analyzes Pokemon Showdown battle replays, displaying individual Pokemon performance, damage statistics, knockouts, and move usage.",
+        "year": "2026"
+    },
+    {
+        "title": "Quaerat quisquam ipsa voluptas.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Reiciendis eius vitae tempore sint quos doloremque voluptatibus enim corporis repudiandae nisi, magnam nulla veniam non praesentium vero magni cupiditate quae minima accusamus ex repellendus. Quae corrupti cumque doloribus suscipit!"
+    },
+    {
+        "title": "Placeat optio necessitatibus ea.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Rerum dolor recusandae accusamus qui consequuntur voluptate neque eius distinctio nam est consequatur laudantium reprehenderit dolorum, pariatur impedit rem facere labore earum voluptas odio dicta quaerat! Distinctio enim et fugiat!"
+    },
+    {
+        "title": "Quos excepturi veritatis eos!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Eum error consectetur deleniti, rem quod repellendus dolores iusto nam voluptates itaque harum impedit architecto natus minima mollitia quis non? Aliquam illum eaque a nisi itaque, non beatae laborum at."
+    },
+    {
+        "title": "Consectetur nam tempore eaque.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Ea adipisci culpa quo iusto quas mollitia saepe a maiores sequi tempora animi nemo omnis quis amet illo accusamus nam nesciunt, fugiat, esse voluptas voluptates ducimus eligendi? Aut, minus cumque."
+    },
+    {
+        "title": "Possimus minus officia nisi!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Porro quas autem natus! Beatae saepe delectus ullam harum, doloribus quisquam impedit dolorum, minus corrupti, aut aliquam ipsa quas sint atque dolores? Earum consequatur, rerum facere aliquid praesentium hic atque!"
+    },
+    {
+        "title": "Veritatis rem sed ab!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Explicabo fugiat mollitia cumque atque neque quia sapiente itaque aliquam? Veniam dolor rerum excepturi sunt voluptate provident. Facere animi incidunt quam assumenda cupiditate. Dolorum dolores ea cum alias quibusdam libero."
+    },
+    {
+        "title": "Modi quas veritatis amet!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Voluptas ipsam maiores cum sit, aut illo, ab hic porro commodi beatae nisi odio pariatur corrupti et dolorem architecto distinctio repudiandae, alias autem omnis asperiores numquam? Tenetur culpa cum neque."
+    },
+    {
+        "title": "Deserunt accusamus tempore odit.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Hic cumque reprehenderit officia accusantium, voluptatibus totam quae unde iste, obcaecati, maxime voluptate! Qui blanditiis, impedit explicabo, placeat doloribus vel aperiam cumque asperiores similique omnis sint tenetur reiciendis perferendis ducimus!"
+    },
+    {
+        "title": "Facere omnis voluptatem quae.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Autem blanditiis error reiciendis veritatis vitae expedita accusamus inventore porro et iste ipsa, omnis nam esse ratione atque perspiciatis consequatur ipsum possimus sit, fugiat eligendi temporibus. Nihil porro consequatur sint."
+    },
+    {
+        "title": "Ea, deserunt? Maxime, laborum?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Illo aperiam repellat earum aspernatur voluptatibus! Ut fuga dolor animi rem placeat maiores corrupti expedita non assumenda perferendis! Necessitatibus porro eligendi tenetur blanditiis voluptates aspernatur, autem nesciunt nihil suscipit qui!"
+    }
+]
