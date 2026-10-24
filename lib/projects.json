@@ -1,19 +1,20 @@
 [
     {
         "title": "Pokemon Battle Analyzer",
-        "image": "images/pokemonproj.png",
+        "image": "projects/images/pokemonproj.png",
         "description": "\n                A Discord bot that analyzes Pokemon Showdown battles,\n                providing tournament statistics and battle insights.\n            "
     },
     {
         "title": "Pokemon Showdown Battle Analyzer Website",
-        "image": "images/PokemonWebsite.png",
+        "image": "projects/images/PokemonWebsite.png",
         "description": "A web app that analyzes Pokemon Showdown battle replays, displaying individual Pokemon performance, damage statistics, knockouts, and move usage.",
         "year": "2026"
     },
     {
-        "title": "Quaerat quisquam ipsa voluptas.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Reiciendis eius vitae tempore sint quos doloremque voluptatibus enim corporis repudiandae nisi, magnam nulla veniam non praesentium vero magni cupiditate quae minima accusamus ex repellendus. Quae corrupti cumque doloribus suscipit!"
+        "title": "MyAnimeList Chrome Extension MAL+",
+        "image": "projects/images/MALplus.png",
+        "description": "A Chrome extension that connects to your MyAnimeList account, fetches your list, and gives recommendations.",
+        "year": "2026"
     },
     {
         "title": "Placeat optio necessitatibus ea.",
