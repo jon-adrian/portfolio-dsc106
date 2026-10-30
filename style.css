@@ -152,3 +152,64 @@ input, textarea, button, select {
   margin-block: 2em;
   overflow: visible;
 }
+  .pie-container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.pie-container .legend {
+  flex: 1;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  border: 1px solid #888;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin-block: 2em;
+  list-style: none;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  list-style: none;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: var(--color);
+  border-radius: 0.2em;
+  flex-shrink: 0;
+}
+
+#projects-pie-plot {
+  &:has(path:hover) {
+      path:not(:hover) {
+          opacity: 0.5;
+      }
+  }
+}
+
+#projects-pie-plot path {
+  transition: 300ms;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+#projects-pie-plot path.selected {
+  fill: var(--color);
+}
+
+#projects-pie-plot path {
+  cursor: pointer;
+}
