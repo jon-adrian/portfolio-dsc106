@@ -11,6 +11,7 @@ let pages = [
     { url: 'contact/', title: 'Contact' },
     { url: 'resume/', title: 'Resume' },
     { url: 'https://github.com/jon-adrian', title: 'GitHub' },
+    { url: 'meta/', title: 'Meta' }
   ];
   
   let BASE_PATH = location.hostname === 'localhost' ||
