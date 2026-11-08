@@ -294,3 +294,37 @@ dl.info[hidden]:not(:hover, :focus-within) {
   stroke: currentColor;
   stroke-opacity: 0.2;
 }
+
+.brush .selection {
+  pointer-events: none;
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: currentColor;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+#chart circle.selected {
+  fill: #ff6b6b;
+}
+
+#language-breakdown {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1rem;
+}
+
+#language-breakdown dt,
+#language-breakdown dd {
+  grid-row: auto;
+  margin: 0;
+}
