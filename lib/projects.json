@@ -1,5 +1,12 @@
 [
     {
+      "title": "Bikewatching",
+      "image": "projects/images/bikewatching.png",
+      "description": "A D3.js Mapbox visualization that shows Boston-area bike traffic and transportation, with time filters.",
+      "year": "2026",
+      "url": "https://jon-adrian.github.io/lab7-geospatial/"
+    },    
+    {
         "title": "Pokemon Battle Analyzer",
         "image": "projects/images/pokemonproj.png",
         "description": "\n                A Discord bot that analyzes Pokemon Showdown battles,\n                providing tournament statistics and battle insights.\n            ",
