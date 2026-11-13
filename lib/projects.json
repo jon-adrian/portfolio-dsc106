@@ -10,13 +10,15 @@
         "title": "Pokemon Battle Analyzer",
         "image": "projects/images/pokemonproj.png",
         "description": "\n                A Discord bot that analyzes Pokemon Showdown battles,\n                providing tournament statistics and battle insights.\n            ",
-        "year": "2026"
+        "year": "2026",
+        "url": "https://github.com/jon-adrian/PokeReplay"
     },
     {
         "title": "Pokemon Showdown Battle Analyzer Website",
         "image": "projects/images/PokemonWebsite.png",
         "description": "A web app that analyzes Pokemon Showdown battle replays, displaying individual Pokemon performance, damage statistics, knockouts, and move usage.",
-        "year": "2026"
+        "year": "2026",
+        "url": "https://github.com/jon-adrian/PokemonShowdownBattleAnalyzer"
     },
     {
         "title": "MyAnimeList Chrome Extension MAL+",
