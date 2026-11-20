@@ -1,4 +1,5 @@
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
+import scrollama from 'https://cdn.jsdelivr.net/npm/scrollama@3.2.0/+esm';
 
 let xScale;
 let yScale;
@@ -45,7 +46,8 @@ function processCommits(data) {
         });
   
         return ret;
-      });
+      })
+      .sort((a, b) => a.datetime - b.datetime);
   }
 
   function renderCommitInfo(data, commits) {
@@ -291,9 +293,7 @@ function updateFileDisplay(filteredCommits) {
       .data((d) => d.lines)
       .join('div')
       .attr('class', 'loc')
-      .attr('style', (d) => `--color: ${colors(d.type)}`);
-    
-    
+      .attr('style', (d) => `--color: ${colors(d.type)}`);    
 }
 
 function isCommitSelected(selection, commit) {
@@ -412,3 +412,64 @@ updateFileDisplay(filteredCommits);
     .addEventListener('input', onTimeSliderChange);
   
   onTimeSliderChange();
+
+d3.select('#scatter-story')
+.selectAll('.step')
+.data(commits)
+.join('div')
+.attr('class', 'step')
+.html(
+  (d, i) => `
+    On ${d.datetime.toLocaleString('en', {
+      dateStyle: 'full',
+      timeStyle: 'short',
+    })},
+    I made <a href="${d.url}" target="_blank">${
+      i > 0 ? 'another glorious commit' : 'my first commit, and it was glorious'
+    }</a>.
+    I edited ${d.totalLines} lines across ${
+      d3.rollups(
+        d.lines,
+        (D) => D.length,
+        (d) => d.file,
+      ).length
+    } files.
+    Then I looked over all I had made, and I saw that it was very good.
+  `,
+);
+
+
+function onStepEnter(response) {
+  const commit = response.element.__data__;
+
+  commitMaxTime = commit.datetime;
+
+  filteredCommits = commits.filter(
+    (d) => d.datetime <= commitMaxTime
+  );
+
+  updateScatterPlot(data, filteredCommits);
+  updateFileDisplay(filteredCommits);
+
+  commitProgress = timeScale(commitMaxTime);
+
+  document.getElementById('commit-progress').value =
+    commitProgress;
+
+  document.getElementById('commit-time').textContent =
+    commitMaxTime.toLocaleString('en', {
+      dateStyle: 'long',
+      timeStyle: 'short',
+    });
+}
+
+
+const scroller = scrollama();
+
+scroller
+  .setup({
+    container: '#scrolly-1',
+    step: '#scrolly-1 .step',
+    offset: 0.5,
+  })
+  .onStepEnter(onStepEnter);
