@@ -335,7 +335,7 @@ dl.info[hidden]:not(:hover, :focus-within) {
 
 #files {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
 
   > div {
     grid-column: 1 / -1;
@@ -401,4 +401,64 @@ dl.info[hidden]:not(:hover, :focus-within) {
 #scatter-story .step {
   padding: 1.5em;
   margin-bottom: 50vh;
+}
+
+#scrolly-2 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+
+#scrolly-2 > * {
+  flex: 1;
+  min-width: 0;
+}
+
+#files-story {
+  position: relative;
+}
+
+#files-story .step {
+  padding: 1em;
+  margin-bottom: 10vh;
+}
+
+#files-plot {
+  position: sticky;
+  top: 10vh;
+  align-self: flex-start;
+  height: 80vh;
+  overflow-y: auto;
+}
+
+
+/* File visualization inside the second story */
+
+#scrolly-2 {
+  align-items: stretch;
+}
+
+#files-plot {
+  position: sticky;
+  top: 10vh;
+  align-self: flex-start;
+  height: 65vh;
+  overflow-y: auto;
+  min-width: 0;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+#files dt {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  padding-right: 0.5rem;
+}
+
+#files dd {
+  min-width: 0;
+}
+
+#files .loc {
+  flex: 0 0 0.5em;
 }

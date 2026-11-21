@@ -473,3 +473,78 @@ scroller
     offset: 0.5,
   })
   .onStepEnter(onStepEnter);
+
+
+  d3.select('#files-story')
+  .selectAll('.step')
+  .data(commits.filter((d, i) =>
+  i % 4 === 0 || i === commits.length - 1
+))
+  .join('div')
+  .attr('class', 'step')
+  .html((d, i) => {
+    const commitsSoFar = commits.filter(
+      c => c.datetime <= d.datetime
+    );
+    const allLines = commitsSoFar.flatMap(c => c.lines);
+
+    const files = d3.group(allLines, line => line.file);
+    const languages = d3.rollup(
+      allLines,
+      lines => lines.length,
+      line => line.type
+    );
+
+    const largestFile = [...files]
+      .sort((a, b) => b[1].length - a[1].length)[0];
+
+    const topLanguage = [...languages]
+      .sort((a, b) => b[1] - a[1])[0];
+
+    return `
+      <h3>${d.datetime.toLocaleDateString('en', {
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric'
+      })}</h3>
+
+      <p>
+        My codebase has grown to
+        <strong>${allLines.length} lines</strong>
+        across <strong>${files.size} files</strong>.
+      </p>
+
+      <p>
+        My largest file so far is
+        <strong>${largestFile?.[0] ?? 'N/A'}</strong>,
+        containing ${largestFile?.[1].length ?? 0} lines.
+      </p>
+
+      <p>
+        The most common languages is
+        <strong>${topLanguage?.[0] ?? 'N/A'}</strong>.
+      </p>
+    `;
+  });
+
+
+  function onFileStepEnter(response) {
+    const commit = response.element.__data__;
+  
+    const visibleCommits = commits.filter(
+      (d) => d.datetime <= commit.datetime
+    );
+  
+    updateFileDisplay(visibleCommits);
+  }
+
+  const fileScroller = scrollama();
+
+  fileScroller
+    .setup({
+      container: '#scrolly-2',
+      step: '#scrolly-2 .step',
+      offset: 0.8,
+    })
+    .onStepEnter(onFileStepEnter);
+  
